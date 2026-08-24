@@ -6,9 +6,10 @@ Files in this folder are packaged into the extension at build time. Only keep wh
 
 ```
 assets/
-├── icons/     # Extension & command icons (referenced in package.json)
-└── gif/       # Onboarding GIFs (referenced in SetupGuide.tsx)
+└── icons/     # Extension & command icons (referenced in package.json)
 ```
+
+> Onboarding GIFs are **not** bundled. They live on the orphan [`media`](https://github.com/phileastv/frameio_raycast_extension/tree/media) branch and are referenced by absolute URL from `SetupGuide.tsx` and the root `README.md`, so the extension source stays free of large binaries.
 
 ### `icons/`
 
@@ -22,14 +23,9 @@ assets/
 | `last-folder-icon.png` | Open Last Folder command |
 | `recent-uploads-icon.png` | Recent Uploads command |
 
-### `gif/`
-
-| File | Used by |
-|------|---------|
-| `frameio_raycast_demo.gif` | Setup guide — plugin demo |
-| `frameio_raycast_setup.gif` | Setup guide — Adobe Client ID tutorial |
-
 ## Editing icons
 
 1. Export a 512×512 PNG
 2. Copy the final icon into `icons/` with the matching runtime filename
+
+Photoshop sources for the icons live under `psd/` on the [`media`](https://github.com/phileastv/frameio_raycast_extension/tree/media) branch.

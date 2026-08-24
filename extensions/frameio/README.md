@@ -4,7 +4,7 @@ An Raycast extension to browse and search your [Frame.io](https://frame.io) v4 a
 
 ***Not** made by frame.io or Adobe !*
 
-![Plugin demo](./media/demo.gif)
+![Plugin demo](https://raw.githubusercontent.com/phileastv/frameio_raycast_extension/media/demo.gif)
 
 ## Background
 
@@ -24,7 +24,7 @@ The goal is *not* to have a full-featured Frame.io client, but to be able to bro
 
 On first launch (without a Client ID), every command shows a guided onboarding. You can also configure the Client ID in extension preferences (`⌘,`).
 
-![Setup tutorial](./media/setup.gif)
+![Setup tutorial](https://raw.githubusercontent.com/phileastv/frameio_raycast_extension/media/setup.gif)
 
 1. Go to [Adobe Developer Console](https://developer.adobe.com/console)
 2. **Add Project**

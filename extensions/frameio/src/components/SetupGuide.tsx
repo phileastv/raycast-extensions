@@ -1,27 +1,10 @@
 import { JSX, useState } from "react";
-import {
-  Form,
-  ActionPanel,
-  Action,
-  Icon,
-  open,
-  Detail,
-  useNavigation,
-  showToast,
-  Toast,
-  environment,
-} from "@raycast/api";
-import { existsSync } from "fs";
-import { join } from "path";
+import { Form, ActionPanel, Action, Icon, open, Detail, useNavigation, showToast, Toast } from "@raycast/api";
 import { authorize } from "../auth";
 import { saveClientId } from "../client-id";
 
-const GIF_DEMO_NAME = "frameio_raycast_demo.gif";
-const GIF_SETUP_NAME = "frameio_raycast_setup.gif";
-const demoGifPath = join(environment.assetsPath, "gif", GIF_DEMO_NAME);
-const setupGifPath = join(environment.assetsPath, "gif", GIF_SETUP_NAME);
-const hasPluginDemoGif = existsSync(demoGifPath);
-const hasSetupGif = existsSync(setupGifPath);
+const DEMO_GIF_URL = "https://raw.githubusercontent.com/phileastv/frameio_raycast_extension/media/demo.gif";
+const SETUP_GIF_URL = "https://raw.githubusercontent.com/phileastv/frameio_raycast_extension/media/setup.gif";
 
 const FEATURES = `## What you can do
 
@@ -106,7 +89,7 @@ function SetupClientIdForm({ onComplete }: SetupGuideProps): JSX.Element {
 function SetupTutorial({ onComplete }: SetupGuideProps): JSX.Element {
   const { push } = useNavigation();
 
-  const setupGifBlock = hasSetupGif ? `![Setup — get your Client ID](${setupGifPath})\n\n` : "";
+  const setupGifBlock = `![Setup — get your Client ID](${SETUP_GIF_URL})\n\n`;
 
   return (
     <Detail
@@ -135,7 +118,7 @@ function SetupTutorial({ onComplete }: SetupGuideProps): JSX.Element {
 export function SetupGuide({ onComplete }: SetupGuideProps): JSX.Element {
   const { push } = useNavigation();
 
-  const pluginDemoBlock = hasPluginDemoGif ? `![Plugin demo](${demoGifPath})\n\n` : "";
+  const pluginDemoBlock = `![Plugin demo](${DEMO_GIF_URL})\n\n`;
 
   return (
     <Detail

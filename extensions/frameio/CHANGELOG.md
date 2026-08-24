@@ -9,4 +9,5 @@
 - Guided onboarding for Adobe Developer Client ID setup
 - Default browse location via extension preference (paste a folder ID)
 - Copy workspace, project, folder, and file IDs from the Browse command
+- Open the current folder in Frame.io from the Browse command
 - Sign out via extension preference

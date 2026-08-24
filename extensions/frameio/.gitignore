@@ -1,3 +1,11 @@
 node_modules
 dist
 .DS_Store
+
+# Generated at build time from package.json preferences
+raycast-env.d.ts
+
+# Binary assets live on the orphan `media` branch, not in the extension source
+# tree (this folder is mirrored into the raycast/extensions monorepo).
+media/
+design/
